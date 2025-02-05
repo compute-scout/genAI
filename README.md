@@ -6,7 +6,7 @@ Clone the repository:
 
 ```sh
 git clone https://github.com/compute-scout/genAI.git
-cd genAI
+cd genai
 ```
 
 Install dependencies:
