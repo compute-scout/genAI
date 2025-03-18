@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #83bbec;
+    color: white;
+    padding: 1em;
+    /* text-align: center; */
+
+}
+header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-section {
+    margin-left: 210px;
+    flex-grow: 1;
+}
+
+.controls {
+    margin-top: 10px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.reset-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+.file-upload-container {
+    
+    display: flex;
+    justify-content: space-evenly;
+background-color: #eaeff3;}
+
+
+
+.file-list-container {
+    position: relative; /* Make the container relative so the count can be positioned inside it */
+    width: 50%;
+    height: 500px;
+    overflow-y: auto;
+    /* background-color: red; */
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#file-list {
+    list-style: none;
+    padding-left: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+#file-list li {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#file-list li:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+
+#file-count {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: add a background for better visibility */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.preview-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    /* background-color: #55b9d2; */
+    height: 500px;
+    overflow-y: auto;
+    width: 50%;
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+.process-btn-container {
+    margin-top: 25px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.process-btn {
+    background-color: #158dee;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 30%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    /* padding: 10px; */
+    position: absolute;
+    bottom: 0;
+    /* width: 100%; */
+}
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+}
+
+.custom-select select {
+    margin-bottom: 50px;
+    appearance: none; /* Remove default select styling */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-select select:hover {
+    border-color: #4CAF50;
+}
+
+.custom-select select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.custom-select:after {
+    content: "\25BC"; /* Down arrow */
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 14px;
+    color: #555;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}

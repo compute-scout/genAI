@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Analyzer Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-file-invoice"></i> Invoices</a></li>
+                <li><a href="#"><i class="fas fa-history"></i> History</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+            <footer>
+                <p>&copy; 2025 Invoice Analyzer Pro. All Rights Reserved.</p>
+            </footer>
+        </aside>
+
+        <main class="main-section">
+            <header>
+                <img src="logo.webp" alt="Invoice Analyzer Pro Logo" style="width: 150px;">
+
+                <h1>Invoice Analyzer Pro</h1>
+            </header>
+            <div class="controls">
+                <label for="file-source">Choose source:
+                    <div class="custom-select">
+                        <select id="file-source" onchange="handleSourceChange()">
+                            <option value="" disabled selected>Select file source</option>
+                            <option value="s3">S3 Bucket</option>
+                            <option value="device">From your device</option>
+                        </select>
+                    </div>
+                </label>
+                
+                <button class="reset-btn" onclick="resetFiles()">Reset</button>
+            </div>
+            <div class="file-upload-container">
+                <div class="file-list-container">
+                    <h3>Selected Files</h3>
+                    <ul id="file-list"></ul>
+                    <p id="file-count">Selected Files: 0</p>
+                </div>
+
+                <div class="preview-container">
+                    <h3>File Preview</h3>
+                    <div id="file-preview">Select a file to preview it here</div>
+                </div>
+            </div>
+            <div class="process-btn-container">
+                <button class="process-btn" onclick="processFiles()">Process</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
